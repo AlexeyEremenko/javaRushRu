@@ -4,6 +4,7 @@ package com.javarush.task.task14.task1401;
 //He who eats, eats to the Lord, for he gives God thanks. He who doesn't eat, to the Lord he doesn't eat, 
 //and gives God thanks. (Romans 14:6)
 
+
 /* 
 Bingo!
 */
