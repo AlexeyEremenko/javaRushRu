@@ -1,0 +1,83 @@
+package com.javarush.task.task15.task1509;
+
+//But that the world may know that I love the Father, and as the Father commanded me, even so I do. Arise, let us go from here. (John 14:31)
+
+/* 
+Мужчина или женщина?
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Man man = new Man();
+        Woman woman = new Woman();
+
+        printName(man);
+        printName(woman);
+    }
+
+    public static void printName(Human human) {
+
+    }
+
+    public static class Human {
+
+    }
+
+    public static class Man extends Human {
+
+    }
+
+    public static class Woman extends Human {
+
+    }
+}
+
+
+
+
+
+/*
+Мужчина или женщина?
+1. Изменить метод printName так, чтобы он выполнялся для man и woman.
+2. Реализация метода printName должна быть одна.
+
+
+Требования:
+1. В классе Solution должен быть реализован только один метод printName.
+2. Метод printName должен принимать один параметр типа Human.
+3. Класс Man должен быть потомком класса Human.
+4. Класс Woman должен быть потомком класса Human.
+
+package com.javarush.task.task15.task1509;
+
+* 
+Мужчина или женщина?
+*
+
+public class Solution {
+    public static void main(String[] args) {
+        Man man = new Man();
+        Woman woman = new Woman();
+
+        printName(man);
+        printName(woman);
+    }
+
+    public static void printName(Man man) {
+
+    }
+
+    public static class Human {
+
+    }
+
+    public static class Man {
+
+    }
+
+    public static class Woman {
+
+    }
+}
+
+*/
