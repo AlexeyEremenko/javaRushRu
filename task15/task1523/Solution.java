@@ -29,15 +29,15 @@ public class Solution {
 package com.javarush.task.task15.task1523;
 
 
-public class Subsolution extends Solution {
+public class SubSolution extends Solution {
     
-     public Subsolution(int ilove) {
+     SubSolution(int ilove) {
         super(ilove);
     }
-    protected Subsolution(double dabbl) {
+    protected SubSolution(double dabbl) {
         super(dabbl);
     }
-    Subsolution() {        
+    public SubSolution() {        
     }    
 }
 -------------------------------------------------------------------------------------------------------------------
