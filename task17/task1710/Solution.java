@@ -1,6 +1,7 @@
 
 //For I will not dare to speak of any things except those which Christ worked through me, for the obedience of the Gentiles, by word and deed (Romans 15:18)
 
+
 -----------------------------------------------------Solution.java------------------------------------------------
 package com.javarush.task.task17.task1710;
 
