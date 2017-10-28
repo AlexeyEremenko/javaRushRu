@@ -1,6 +1,7 @@
 
 //He entered into the Praetorium again, and said to Jesus, "Where are you from?" But Jesus gave him no answer (John 19:9)
 
+
 package com.javarush.task.task20.task2018;
 
 import java.io.Serializable;
