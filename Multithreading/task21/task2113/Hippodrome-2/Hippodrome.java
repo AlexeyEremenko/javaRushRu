@@ -1,7 +1,19 @@
 
 //And the God of peace will quickly crush Satan under your feet. The grace of our Lord Jesus Christ be with you. (Romans 16:20)
 
+package com.javarush.task.task21.task2113;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class Hippodrome {
+    private List<Horse> horses = new ArrayList<Horse>();
+    
+    public List<Horse> getHorses() {
+        return this.horses;
+    }
+    public static void main(String[] args) {}
+}
 
 
 
