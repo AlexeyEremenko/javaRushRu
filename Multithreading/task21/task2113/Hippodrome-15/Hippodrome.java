@@ -50,7 +50,7 @@ public class Hippodrome {
     }
     
     public void printWinner() {
-        System.out.println("Winner is " +  winner.getName() + "!");
+        System.out.print("Winner is " +  getWinner().getName() + "!");
     }
     
     public static void main(String[] args) {
