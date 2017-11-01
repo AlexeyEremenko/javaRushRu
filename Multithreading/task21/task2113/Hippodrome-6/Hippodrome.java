@@ -1,12 +1,36 @@
 
 //Therefore when Jesus saw his mother, and the disciple whom he loved standing there, he said to his mother, "Woman, behold your son!" (John 19:26)
 
+package com.javarush.task.task21.task2113;
 
+import java.util.ArrayList;
+import java.util.List;
 
-
-
-
-
+public class Hippodrome {
+    
+    private List<Horse> horses;
+    public static Hippodrome game;
+    
+    public Hippodrome(List<Horse> list) {
+        this.horses = list;
+    }
+    
+    public List<Horse> getHorses() {
+        return this.horses;
+    }
+    public static void main(String[] args) {
+        
+        List<Horse> horses = new ArrayList<Horse>();
+        
+        Horse horseRed = new Horse("red", 3, 0);
+        Horse horseBlack = new Horse("black", 3, 0);
+        Horse horseWhite = new Horse("White", 3, 0);
+        horses.add(horseRed);
+        horses.add(horseBlack);
+        horses.add(horseWhite);
+        game = new Hippodrome(horses);
+    }
+}
 
 /*
 Ипподром(6)
