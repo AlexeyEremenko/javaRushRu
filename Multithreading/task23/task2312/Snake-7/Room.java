@@ -14,8 +14,17 @@ public class Room {
 ------------------------------------------------------Snake.java--------------------------------------------------------------
 package com.javarush.task.task23.task2312;
 
+import java.util.*;
 
 public class Snake {
+    private List<SnakeSection> sections = new ArrayList<SnakeSection>();
+    private boolean isAlive;
+    private SnakeDirection direction;
+    
+    public boolean isAlive() {return isAlive;}
+    public List<SnakeSection> getSections() {return sections;}
+    public SnakeDirection getDirection() {return direction;}
+    public void setDirection(SnakeDirection newDirection) {this.direction = newDirection;}
 }
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -165,6 +174,41 @@ public class KeyboardObserver extends Thread
 ------------------------------------------------------------------------------------------------------------------------------
 
 /*
+Змейка(7)
+«Кусочки змеи» мы описали, теперь займемся самой змеей.
+
+У змеи должен быть список кусочков(SnakeSection) и голова.
+Пусть головой будет просто самый первый кусочек (с номером 0).
+
+У змеи также есть направление движения — сторона, куда она движется по умолчанию.
+А еще есть состояние — жива змея или мертва.
+Игра заканчивается тогда, когда змея мертва.
+
+Надо:
+а) Добавить в класс Snake поле sections типа List<SnakeSection>.
+б) Добавить поле isAlive типа boolean.
+в) Добавить поле direction типа SnakeDirection.
+г) Для всех полей добавить getter’ы, а для direction еще и setter.
+
+Примечание:
+Для полей логического типа геттер принято писать не как getValue(), а как isValue() — это улучшает читабельность кода.
+Только не пиши isIsAlive(). Одного is будет вполне достаточно.
+
+Примечание 2:
+Все поля создаваемые в этом задании должны быть приватными, а методы — публичными.
+
+
+Требования:
+1. В классе Snake должно быть объявлено поле sections типа List.
+2. В классе Snake должно быть объявлено поле isAlive типа boolean.
+3. В классе Snake должно быть объявлено поле direction типа SnakeDirection.
+4. В классе Snake должен быть создан корректный геттер для поля sections.
+5. В классе Snake должен быть создан корректный геттер для поля isAlive.
+6. В классе Snake должен быть создан корректный геттер для поля direction.
+7. В классе Snake должен быть создан корректный сеттер для поля direction.
+8. Все поля класса Snake должны быть объявлены с модификатором доступа private.
+9. Все методы класса Snake должны быть объявлены с модификатором доступа public.
+
 Змейка(6)
 Теперь займемся классом SnakeSection.
 Он будет описывать один кусочек змеи.
