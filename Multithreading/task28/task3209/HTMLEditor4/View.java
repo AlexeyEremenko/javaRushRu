@@ -1,0 +1,65 @@
+
+//They will see his face, and his name will be on their foreheads. (Revelation 22:4)
+
+package com.javarush.task.task32.task3209;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import com.javarush.task.task32.task3209.listeners.FrameListener;
+
+public class View extends JFrame implements ActionListener {
+
+    private Controller controller;
+    
+    private JTabbedPane tabbedPane = new JTabbedPane();
+    private JTextPane htmlTextPane = new JTextPane();
+    private JEditorPane plainTextPane = new JEditorPane();
+    
+    public void init() {
+        initGui();
+        this.addWindowListener(new FrameListener(this));
+        this.setVisible(true);
+    }
+    
+    public void exit() {
+        controller.exit();
+    }
+    
+    public void initMenuBar() {}
+    public void initEditor() {}
+    public void initGui() {
+        initMenuBar();
+        initEditor();
+        pack();
+    }
+
+    public void actionPerformed(ActionEvent actionEvent) {}
+
+    public Controller getController() {
+        return controller;
+    }
+
+    public void setController(Controller controller) {
+        this.controller = controller;
+    }
+}
+
+/*
+HTML Editor (4)
+4.1. Объяви методы initMenuBar() и initEditor() в классе View. Они будут отвечать за инициализацию меню и панелей редактора.
+4.2. Объяви в представлении метод initGui(). Он будет инициализировать графический интерфейс. Вызови из него инициализацию меню initMenuBar(), инициализацию редактора initEditor() и метод pack(), реализацию которого мы унаследовали от класса JFrame.
+Разберись что делает метод pack().
+4.3. Реализуй метод init() представления. Он должен:
+4.3.1. Вызывать инициализацию графического интерфейса initGui().
+4.3.2. Добавлять слушателя событий нашего окна. В качестве подписчика создай и используй объект класса FrameListener. В качестве метода для добавления подписчика используй подходящий метод из класса Window от которого наследуется и наш класс через классы JFrame и Frame.
+4.3.3. Показывать наше окно. Используй метод setVisible с правильным параметром.
+На этом этапе приложение при запуске должно показывать окно, которое можно растягивать, разворачивать, закрыть и т.д.
+
+
+Требования:
+1. Класс View должен содержать метод public void initMenuBar().
+2. Класс View должен содержать метод public void initEditor().
+3. Класс View должен реализовывать метод public void initGui().
+4. Реализуй метод init() класса View, согласно задания.
+*/
