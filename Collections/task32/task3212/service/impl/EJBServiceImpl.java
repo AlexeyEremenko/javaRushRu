@@ -2,7 +2,23 @@
 //But the fearful, and unbelieving, and the abominable, and murderers, and whoremongers, and sorcerers, 
 //and idolaters, and all liars, shall have their part in the lake which burneth with fire and brimstone: which is the second death. (Revelation 21:8)
 
+package com.javarush.task.task32.task3212.service.impl;
 
+import com.javarush.task.task32.task3212.service.Service;
+
+public class EJBServiceImpl implements Service {
+
+    @Override
+    public void execute() {
+        System.out.println("Executing EJBService");
+    }
+
+    @Override
+    public String getName() {
+        return "EJBService";
+    }
+
+}
 
 /*
 Service Locator
