@@ -1,0 +1,49 @@
+
+//But he spake of the temple of his body.(John 2:21)
+
+package com.javarush.task.task38.task3801;
+
+public class NameChecker {
+    private static final int MAX_NUMBER_OF_CHARACTERS = 100500;
+    public static int getNumberOfCharacters(String name) throws Exception {
+        if (name == null)
+            throw new NameIsNullException();
+        else if (name.isEmpty())
+            throw new NameIsEmptyException();
+
+        int length = name.length();
+        if (length > MAX_NUMBER_OF_CHARACTERS)
+            throw new Exception("Слишком длинное имя");
+        return length;
+    }
+}
+
+/*
+Исправь ошибки в коде
+
+Исключения NameIsEmptyException и NameIsNullException должны быть checked.
+
+Все типы исключений должны быть обработаны.
+
+Реализацию методов main() и getNumberOfCharacters() не менять.
+
+Изменен должен быть только порядок catch блоков в методе main().
+
+
+
+
+
+Требования:
+
+1. При возникновении NameIsNullException на экран должна быть выведена строка: "Ошибка: Имя не задано".
+
+2. При возникновении NameIsEmptyException на экран должна быть выведена строка: "Ошибка: Имя пустое".
+
+3. При возникновении любого другого исключения на экран должна быть выведена строка возвращаемая методом toString этого исключения.
+
+4. Если исключений не было, на экран должна быть выведена строка формата: "Имя содержит X символов", где X - количество символов в нулевом параметре переданном в метод main.
+
+5. Класс NameIsEmptyException должен быть потомком класса Exception.
+
+6. Класс NameIsNullException должен быть потомком класса Exception.
+*/
