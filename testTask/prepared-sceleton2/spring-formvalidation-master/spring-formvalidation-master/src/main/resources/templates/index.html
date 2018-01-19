@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:p2="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:dt="http://www.thymeleaf.org/dandelion/datatables">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Java Rush Test Task (index)</title>
+</head>
+<body>
+<form th:action="@{/}" method="post"  th:object="${index}" enctype="multipart/form-data">
+
+    <br/><br/>
+    data:
+    <input type="text" th:field="*{data}" /> <span th:text="'(size: min=2, max=240)'"/>
+    <div style="color: red" th:if="${#fields.hasErrors('data')}" th:errors="*{data}"/>
+
+
+    <br/><br/>
+    <button type="submit">SendAction</button>
+
+    <!--<table>
+    <td th:value="*{getCol1()}"></td>
+
+    <td th:value="*{col2}"></td>
+
+    <td th:value="*{col3}"></td>
+
+    <td th:text="*{col4}"></td>
+    </table>-->
+
+    <table id="myTableId" dt:table="true">
+        <thead>
+        <tr>
+            <th visible="false">Id</th>
+            <th>LastName</th>
+            <th>FirstName</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person : ${persons}">
+            <td th:text="${person?.id}">1</td>
+            <td th:text="${person?.lastName}">Doe</td>
+            <td th:text="${person?.firstName}">John</td>
+        </tr>
+        </tbody>
+    </table>
+
+</form>
+
+
+
+</body>
+</html>
